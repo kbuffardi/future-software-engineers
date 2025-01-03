@@ -6,7 +6,7 @@ This repository contains the online presentation:
 
 ## Presentation
 
-The slides can be viewed in a web browser by opening [index.html](index.html) or as hosted at [learnbyfailure.com/thinking-accuracy/](https://learnbyfailure.com/future-software-engineers/).
+The slides can be viewed in a web browser by opening [index.html](index.html) or as hosted at [learnbyfailure.com/future-software-engineers/](https://learnbyfailure.com/future-software-engineers/).
 
 ## Rebuild HTML
 
