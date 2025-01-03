@@ -1,4 +1,4 @@
-# Thinking Like a Tester
+# Preparing Future Software Engineers, 2025
 
 This repository contains the online presentation:
 
