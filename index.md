@@ -116,9 +116,7 @@ if( row >= 0 && row <= 2 || column >= 0 && column <= 2 )
 
 [comment]: # (!!!)
 
-#### What about Positive Affirmation?
-
-----------
+#### Testing Yourself: Positive Affirmation
 
 * How reliably do tests **positively affirm** functionality consistent with software requirements?
 * All-Function Pairs testing
@@ -135,12 +133,11 @@ if( row >= 0 && row <= 2 || column >= 0 && column <= 2 )
 * Some struggled with either:
   * **positive affirmation** *or* **test effectiveness** on a given function to test
 * Either type of inaccuracy is *equally associated* with number of bugs in *their own* code [(Buffardi \& Valdivia, 2019)](http://hdl.handle.net/10125/60199)
+* Some "Unit Test Smells" associated with **worse accuracy** [(Buffardi \& Aguirre-Ayala, 2021)](https://dl.acm.org/doi/abs/10.1145/3430665.3456328)
 
 [comment]: # (!!!)
 
-#### Measuring Testing Accuracy
-
-----------
+#### Testing Yourself: Measuring Testing Accuracy
 
 * How are **testing effectiveness** and **positive affirmation** related to a lack of bugs? [(Buffardi, Valdivia, \& Rogers, 2019)](https://doi.org/10.1145/3287324.3287351)
   * **Accuracy** = (True Positives + True Negatives) / 
@@ -165,55 +162,7 @@ if( row >= 0 && row <= 2 || column >= 0 && column <= 2 )
 
 (ρ=.648, p<.001)
 
-[comment]: # (!!!)
-
-##### Practice: does this work?
-
-* <small>Receive a string and return whether or not it is strictly a palindrome, where it is spelled the same backwards and forwards when considering every character in the string, but disregarding case ('x' is same as 'X')</small>
-
-![Example implementation of isPalindrome function](isPalindrome.png)
-
-[comment]: # (|||)
-
-##### Practice: identify test cases
-
-* <small>Receive a string and returns whether it has both at least one upper-case
-  letter and at least one lower-case letter</small>
-
-`bool Password::has_mixed_case(string pass)`
-
-* Hand-write test cases
-| Input | Expected Output |
-| ----- | --------------- |
-| *"AbCd"* | *true* |
-* Fork and clone: [github.com/kbuffardi/unit-test-practice](https://github.com/kbuffardi/unit-test-practice/)
-
-[comment]: # (|||)
-
-| A | B |
-| --- | --- |
-| ![Version A](regression-a.png) | ![Version B](regression-b.png) |
-
-[comment]: # (|||)
-
-Answer: [tinyurl.com/unit-test-practice](https://tinyurl.com/unit-test-practice)
-![QR code for unit test practice answers](qr-unit-test-practice-form.png)
-
-[comment]: # (!!!)
-
-##### How to Improve My Unit Tests?
-
-----------
-
-* Avoiding "Unit Test Smells" associated with **worse accuracy** [(Buffardi \& Aguirre-Ayala, 2021)](https://dl.acm.org/doi/abs/10.1145/3430665.3456328):
-  * Each unit test case should only call one member function (when possible)
-  * Keep unit tests simple without conditional logic (e.g. if's, loops, etc.)
-
-[comment]: # (!!!)
-
-##### How to THINK like a tester?
-
-----------
+#### THINK like a tester
 
   * Tversky and Kahneman’s [*Nobel Prize in Economics-winning research*](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/): consumers do not make decisions in their rational best interests because of cognitive biases
   * [**Cognitive Reflection Test**](https://www.aeaweb.org/articles?id=10.1257/089533005775196732) (CRT) tests the proficiency at inhibiting (fast) *"gut reaction"* in favor of (slower) *deliberate critical thinking*, e.g.:
@@ -222,9 +171,15 @@ A bat and a ball cost `$1.10` in total. The bat costs `$1.00` more than the ball
 
 [comment]: # (!!!)
 
-#### CRT vs Code Review
+##### Code Review
 
-----------
+* <small>Receive a string and return whether or not it is strictly a palindrome, where it is spelled the same backwards and forwards when considering every character in the string, but disregarding case ('x' is same as 'X')</small>
+
+![Example implementation of isPalindrome function](isPalindrome.png)
+
+[comment]: # (!!!)
+
+#### CRT vs Code Review
 
 * CRT was a significant predictor of:
   * Code review **rejecting defective code** (p<0.0001) with the log odds of correctly rejecting the defective code increasing by 2.94 (95% CI 1.56-4.50)
@@ -236,22 +191,18 @@ A bat and a ball cost `$1.10` in total. The bat costs `$1.00` more than the ball
 
 #### CRT vs Unit Testing
 
-----------
-
-* **BUT** no correlation between CRT and unit test accuracy in either original (ρ=0.008, p=0.940) or replication (ρ=0.113, p=0.498) studies [(Buffardi 2023)](https://doi.org/10.1109/ICSE-SEET58685.2023.00006)
+* **However**, no correlation between CRT and unit test accuracy in either original (ρ=0.008, p=0.940) or replication (ρ=0.113, p=0.498) studies [(Buffardi 2023)](https://doi.org/10.1109/ICSE-SEET58685.2023.00006)
 * *Why do you think cognitive reflection is associated with manually reviewing code, but not unit test accuracy?*
 
 [comment]: # (!!!)
 
-#### Thinking Like a Tester
+#### Preparing Future Software Engineers
 
-----------
-
-<small>This presentation is accessible at [learnbyfailure.com/thinking-accuracy/](https://learnbyfailure.com/thinking-accuracy/) and its source is available on [GitHub](https://github.com/kbuffardi/thinking-accuracy/).</small>
+<small>This presentation is accessible at [learnbyfailure.com/future-software-engineers/](https://learnbyfailure.com/future-software-engineers/) and its source is available on [GitHub](https://github.com/kbuffardi/future-software-engineers/).</small>
 
 <small>Special thanks to student co-authors: [Pedro Valdivia](https://www.linkedin.com/in/pedro-valdivia1/), [Destiny Rogers](https://www.linkedin.com/in/destiny-rogers/), and [Juan Aguirre-Ayala](https://www.linkedin.com/in/jaguirre-ayala/) who were all undergraduate researchers at Chico State.</small>
 
-<img src="qr-code-thinking-accuracy.png" alt="QR code for this presentation" width="30%">
+<img src="qr-future-se.svg" alt="QR code for this presentation" width="30%">
 </img>
 
 <small>[Back to LearnByFailure](https://learnbyfailure.com/research/)
