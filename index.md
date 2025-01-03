@@ -14,25 +14,55 @@
 [comment]: # (respondToHashChanges: false)
 [comment]: # (Other settings are documented at https://revealjs.com/config/)
 
-### Measuring Unit Test Accuracy
-#### and Thinking Like a Tester
-
+### Preparing Future Software Engineers
 ----------
 
 Kevin Buffardi, Ph.D., Professor, California State University, Chico
 
 [LearnByFailure.com](https://learnbyfailure.com/)
 
-<img src="qr-code-thinking-accuracy.png" alt="QR code for this presentation" width="30%">
+<img src="qr-future-se.svg" alt="QR code for this presentation" width="30%">
 </img>
 
-<sub>[LearnByFailure.com](https://learnbyfailure.com/thinking-accuracy/)</sub>
+<sub>[LearnByFailure.com](https://learnbyfailure.com/future-software-engineers/)</sub>
 
 [comment]: # (!!!)
 
-#### Review: What is unit testing?
+#### Challenges: Academia to Industry
 
-----------
+- Learning to learn
+- Navigate "Big Picture" of Software Development
+- Critial Thinking
+
+[comment]: # (||| data-auto-animate)
+
+#### Challenges: Academia to Industry
+
+- Learning to learn
+  - Contemporary technologies (e.g. platforms, DevOps)
+  - Adapting to evolving trends
+  - Professional skills
+
+[comment]: # (||| data-auto-animate)
+
+#### Challenges: Academia to Industry
+
+- Navigate "Big Picture" of Software Development
+  - Prioritizing users' evolving needs
+  - Long-term maintenance and implications
+
+[comment]: # (||| data-auto-animate)
+
+#### Challenges: Academia to Industry
+
+- Critial Thinking
+  - Learning, analyzing, innovating norms
+  - Testing yourself
+
+
+[comment]: # (!!! data-auto-animate)
+
+#### Testing Yourself: Unit testing
 
 * Automated check of the functionality of the smallest "unit" of code
   * Documents expected behavior of the unit
@@ -40,28 +70,12 @@ Kevin Buffardi, Ph.D., Professor, California State University, Chico
   * Test a function implementation immediately
   * Regression tests
 
+[comment]: # (|||)
 
-[comment]: # (!!!)
+#### Testing Yourself: Unit Test Assertiona
 
-#### Review: Example Unit Test
-
-----------
-
-* Given a function `place_piece`
-  * receives **row** and **column** integer coordinates (each 0-2, inclusive)
-  * update the Tic-Tac-Toe board (3x3) of the current player's mark (`X` or `O`) if the space is not yet occupied and return the character of the piece placed
-  * if there's already a piece there, return **'@'** 
-  * or if the coordinates are invalid, return **'?'**.
-
-[comment]: # (||| data-auto-animate)
-
-#### Review: Example Unit Test
-
-----------
-
-Example unit test assertions, 
-
-comparing **actual** and **expected** values:
+Compare **actual** and **expected** values 
+of placing pieces on a Tic-Tac-Toe board:
 
 `ASSERT_EQ( board.place_piece(0,0), 'X');`
 
@@ -70,20 +84,22 @@ Or
 `ASSERT_EQ( board.place_piece(-1,2), '?');`
 
 
-[comment]: # (!!!)
-
-#### Conventional Testing Metrics
-
-----------
-
-* **Coverage** - After all tests are run, what % of production code has been run?
-  * Benefit: can identify code that has not been tested
-  * Limitation of coverage?
-
 [comment]: # (|||)
 
+#### Limitations of Testing Metrics
+
+* **Coverage** - After all tests are run, what % of production code has been run?
+
+[comment]: # (||| data-auto-animate)
+
+#### Limitations of Testing Metrics
+
+* **Coverage** - After all tests are run, what % of production code has been run?
 * **Mutation Testing** - Make "mutant" variants of code, are they "killed" by tests?
-  * **Testing effectiveness** - Percentage of bugs caught by tests?
+
+[comment]: # (||| data-auto-animate)
+
+#### Mutants
 
 ``` [1|2|3|4]
 if( row >= 0 && row <= 2 && column >= 0 && column <= 2 )
